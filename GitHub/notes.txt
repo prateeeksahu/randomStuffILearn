@@ -1,0 +1,112 @@
+- Git is a version control system -> github ,  gitLab are platform to use git 
+
+- .git init has all the history of the repo
+
+- git status tells status of the changes that are made locally, it shows that if these changes are staged or not
+
+- git add . adds all the files where changes has been made to a staging area.....
+
+- git commit add the changes to the history. command is git commit -m "comment you want to add"
+
+	here -m means a message
+
+- this revert backs to the status whhich was before add command
+
+- git log has all the commit history saved in it
+
+- if you say git reset and add a hashcode of certain commit, it will remove all the commits made after that commit
+
+say if you deleted a file but you want it to remain in the repo... just hit git reset <hashcode of thr commit where it was present> and push the file it will have it there
+
+- git stash is more interesting, it reverts changes to HEAD commit but unlike reset command you can have them back whenever you want them back. Using git stash you've just stored them somewhere in back 
+
+git stash pop will get you those files back
+
+now if you say git status clear, the changes you saved in seprate struture will now be gone
+
+- git remote add origin <url>
+
+	if i break this down 
+	remote tells that you're working with urls
+	add means you're adding something
+	origin is the name of your url
+
+- git remote -v tells all the names or url connected to our repo
+
+- now to add your files to origin i.e. to url you will have to say git push origin main. This means push files to origgin's main branch
+
+- quick tip -> if you git log you can see HEAD. so where ever is HEAD is pointing commits will happen on that branch
+
+- to make new branch we use git branch <branchname> command and to shift HEAD to that branch we use git checkout <branchname>
+
+- since you cannot make changes in somebody else's repo, you'll need to have it in your own account. And to have it your own account you can fork that repo in your acc
+
+- now you can use git clone <url> to download the repo in your device locally
+
+- once cloned remember your own url is called origin, but the the orignal repo's url from where you've forked this repo is called upstream url
+	
+	you can add upstream url using git remote add upstream <url> command
+
+- now if you wanna put your channges to main or master branch you'll have to create pull request. Once you pushed your changes in the new branch you created you will see a pop up on github that will say that you can create new pull request
+
+- single branch can have single pull request, even if you commit something new to that branch it will not create new pull request. So if you are working on n diff features it is recomeneded to have n diff branches so its easy to track changes
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+If you want to remove a commit from a pull request follow below steps
+
+1. git resset to the hashcode before that commit. the files will be unstaged
+2. now stage all the files using git add
+3. now use git stash to send these files to stash area, after this command the files will be removed from the local folder as well
+4. now you have removed a commit from your local repo, but it is still present in github so to adjust this mismatch you'll have to force push
+	git push origin <branchname> -f 
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+- Now imaggine you are working on your forked branch, but while you were in middle of your development somebody else merged there code to the main branch of upstream
+
+  You need that code also in your forked main branch also, so there are two ways to do so
+
+Way no. 1:
+
+1. first git checkout to the main branch of your fork
+
+2. then do git fetch --all --prune
+	- git fetch replicates all the changes from the remote repo to the local branch
+	- '--all' will take all branches from the remote repo
+	- When you fetch changes from a remote repository, Git keeps a record of remote branches in your local repository. These are known as remote-tracking branches. If a branch is deleted on the remote 	repository (e.g., because it was merged and removed), the corresponding remote-tracking branch may become outdated and no longer reflect the state of the remote.
+	- The --prune option, when used with git fetch, removes these outdated remote-tracking branches from your local repository.
+	- after this reset the main branch of your fork to that of main branch of orignal repo. The command goes
+		git resest --hard upstream/main
+
+3. After this your main directory that is in your local will have all the changes that orignal main branch has. You can push now
+
+
+Another way to do all this in one command is :
+
+git pull upstream main
+
+-this command does same as previous one, now you can push
+---------------------------------------------------------------------------------------------------------------------------------
+
+If you want to merge your commits either you can simply unstage the commits using git reset and then commit all at once or 
+
+- you can use git rebase -i <hashcode>. This will open an interactive terminal where you can either pick commits or squash them
+
+- once you enter the terminal you will see all the commits made and pick written infront of them. There you can just replace pick with s that means squash. All picks you replace with s will be merged in one commit.
+
+- even if you merge a commit between 2 commits, it will not be a problem.
+
+- to exit and abort dont write :wq, instead write :x
+
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+Addtional Information
+
+- ls -a used to list hidden files
+
+- ls .git will list down items present in .git folder
