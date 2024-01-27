@@ -1,5 +1,22 @@
 public class classesAndObjects {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Student stud = new Student("Prateek", 18);
+        System.out.println(stud.name);
+        System.out.println(stud.rollNo);
+
     }
+
+    public static class Student{
+        String name;
+        int rollNo;
+
+
+
+        public Student(String name, int rollNo){
+            this.name = name;
+            this.rollNo = rollNo;
+        }
+    }
+
 }

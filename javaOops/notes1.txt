@@ -1,0 +1,7 @@
+-> class is just a template that do  not really exist. instance is its physical incarnation which we call object. 
+
+-> instance variable is the variable present inside the instance of class
+
+-> a dot operater (.) is used to access instance variables and functions of a class. It is also called as seprater
+
+->The 'new' keyword dynamically allocates(that is, allocates at run time)memory for an object & returns a reference to it. This reference is, more or less, the address in memory of the object allocated by new. This reference is then stored in the variable. Thus, in Java, all class objects must be dynamically allocated.
