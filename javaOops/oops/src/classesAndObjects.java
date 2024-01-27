@@ -4,6 +4,7 @@ public class classesAndObjects {
         Student stud = new Student("Prateek", 18);
         System.out.println(stud.name);
         System.out.println(stud.rollNo);
+        System.out.println(stud);
 
     }
 
