@@ -1,3 +1,5 @@
+package classesAndObjects;
+
 public class staticKeword {
     // class Test  // ERROR
     static class Test{

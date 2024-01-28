@@ -32,3 +32,42 @@ public class Main{
 }
 
 -> main method is static because to use any thing that is inside the class we have to make its obj first. and because static thing do not belong to obj nut to class main method can be used.
+
+-> A static method can call only other static methods and cannot call a non-static method from it. A static method can be accessed directly by the class name and doesn’t need any object
+
+-> A static class can have two different instances because it is a class. but if we declare some variable inside the static class as static it will become common for all
+
+public class staticKeword {
+    // class Test  // ERROR
+    static class Test{
+        String name;
+
+        public Test(String name) {
+            this.name = name;
+        }
+    }
+
+    public static void main(String[] args) {
+        Test a = new Test("prateek");
+
+        Test b = new Test("anurag");
+
+        System.out.println(a.name); // prateek
+        System.out.println(b.name); // anurag
+    }
+}
+
+-> if see clearly it is class in side a class so now the inner class is static i.e. for creation of its object it does not require refernce of its outer class.
+
+
+-> how System.out.println works => System is a class in side which a variable is created of type PrintStream => inside PrintStream there is function called println() => this function converts anything provided to it in string using toString and puts that to console
+
+-> singleton class is a class that can have only one instance, even if you try to create its new instance it will point to the previous instance that was created. for doing this you must make the constructor private and make variable that store the intance and make function that eill be called to make the instance. If instance is not createad it will create and new instance and will return that and iif it is created it will return the previous instance;
+
+-> copy constructor is constructor that take previous insance as input.
+
+ Box(Box box){
+        this.l = box.l;
+        this.h = box.h;
+        this.w = box.w;
+    }SS

@@ -1,0 +1,8 @@
+-> a class can be inherited using extends keyword
+
+-> while calling a construtor of child class if we want to innitialize values both parent class and child we call parent construtor of parent calass inside the child class constructor.
+
+public boxWeight(double l, double h, double w, double wt) {
+        super(l, h, w); // super represents parent class constructor and setting the value
+        this.wt = wt;
+    }
