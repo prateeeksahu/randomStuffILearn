@@ -5,3 +5,13 @@
 -> a dot operater (.) is used to access instance variables and functions of a class. It is also called as seprater
 
 ->The 'new' keyword dynamically allocates(that is, allocates at run time)memory for an object & returns a reference to it. This reference is, more or less, the address in memory of the object allocated by new. This reference is then stored in the variable. Thus, in Java, all class objects must be dynamically allocated.
+
+-> static variables or functions do not belong to obj. They can be used even if obj is not created. so if i make a counter that keeps track of how many objs are created i will make a static variable inside the class and increment it every time the constructer is called.
+
+then to check how many obj were created i will just access that varible using classname or obj name ex -> class_name.counter or obj.counter.
+
+-> static data members can only have static data members. because main is static we can only use static class or methods inside it. 
+
+-> To use non static things in main what you can do is make the obj of class you are inside and add obj.staticthing while using it.
+
+s
