@@ -14,4 +14,21 @@ then to check how many obj were created i will just access that varible using cl
 
 -> To use non static things in main what you can do is make the obj of class you are inside and add obj.staticthing while using it.
 
-s
+public class Main{
+
+	public static void main(String [] args){
+		
+		Main obj = new Main();
+		obj.greet(); // here greet cannot be used as it is not static and is being inside main method which is static. So I made obj of Main class	
+
+		}
+
+		void greet(){
+		
+		System.out,println("Hello");
+
+		}
+
+}
+
+-> main method is static because to use any thing that is inside the class we have to make its obj first. and because static thing do not belong to obj nut to class main method can be used.
