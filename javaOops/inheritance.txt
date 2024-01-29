@@ -6,3 +6,23 @@ public boxWeight(double l, double h, double w, double wt) {
         super(l, h, w); // super represents parent class constructor and setting the value
         this.wt = wt;
     }
+
+-> child will not be able to access the private data members or methods from parent if they are declared private in parent class
+
+-> you can a refernce variable of type parent and it can point to obj of type child 
+
+Box box = new boxChild();
+
+but the box cannot access any data members or methods that is inside the child class
+
+but child obj can access all data members or methods of parent class
+
+simple words parent obj cannot access aything from child but child can access anything for parent AND
+
+type of reference variable decides what data mambers that obj can access
+
+-> now we cannot make a object an obj of parent and reference variable of child, because we while creating obj we need to initialise variable of child class as well
+
+and those extra variables that are not present in parent canot be initialised using using parent constrctor
+
+-> you can create an obj of type child and a reference of type parent can ppoint to it,  
