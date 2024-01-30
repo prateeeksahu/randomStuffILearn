@@ -26,3 +26,5 @@ type of reference variable decides what data mambers that obj can access
 and those extra variables that are not present in parent canot be initialised using using parent constrctor
 
 -> you can create an obj of type child and a reference of type parent can ppoint to it,  
+
+ln/lk
