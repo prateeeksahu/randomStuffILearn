@@ -28,3 +28,5 @@ and those extra variables that are not present in parent canot be initialised us
 -> you can create an obj of type child and a reference of type parent can ppoint to it,  
 
 ln/lk
+
+-> super keyword refers constructor of parent class, and if you write super keyword with variable name it will refer to parent class variable
