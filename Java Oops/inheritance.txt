@@ -1,6 +1,6 @@
 -> a class can be inherited using extends keyword
 
--> while calling a construtor of child class if we want to innitialize values both parent class and child we call parent construtor of parent calass inside the child class constructor.
+-> while calling a constructor of child class if we want to initialize values both parent class and child we call parent constructor of parent class inside the child class constructor.
 
 public boxWeight(double l, double h, double w, double wt) {
         super(l, h, w); // super represents parent class constructor and setting the value
@@ -23,10 +23,14 @@ type of reference variable decides what data mambers that obj can access
 
 -> now we cannot make a object an obj of parent and reference variable of child, because we while creating obj we need to initialise variable of child class as well
 
-and those extra variables that are not present in parent canot be initialised using using parent constrctor
+and those extra variables that are not present in parent can not be initialised using using parent constrctor
 
 -> you can create an obj of type child and a reference of type parent can ppoint to it,  
 
 ln/lk
 
 -> super keyword refers constructor of parent class, and if you write super keyword with variable name it will refer to parent class variable
+
+-> multiple inheritance is not allowed in java, but overcome this we have interfaces in java
+
+
