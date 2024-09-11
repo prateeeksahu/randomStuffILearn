@@ -1,0 +1,15 @@
+-> To prevent inheritance of class declare it as final  
+
+-> Becuase the compiler decides which method to call at run time it is called late binding, but because the final keyword tells before hand that this method cacnnot be overridden and that entire process is skipped it is called early binding  
+
+-> If we decalare any method with final keyword, it cannot be overriden(this thing helps the compiler to quickly decide which method hence inproving the performance)  
+
+-> Every class in in java is derived from a class called object  
+
+-> Which method will be called is depends upon the type of object (which is defined by the constructor which was called during creating the object. 
+
+If constructor was of child class it will of child type, if constructor was of parent type it will be of parent type)  To apply a check for this @Override annotation is used in java.  
+
+If a parent and child has methods with same name and the object that is created is of child, then the child overrides the method from parent. i.e. child class method is given preference over parent class method.  
+
+2. Dynamic / Runtime polymorphism  Java decides which method to call while  compileing the code. That is why compile time   1. Compile time /  static  -> Types of polymorphism  ->We so method overloading in the code. That is polymorphism  morphism - forms poly - many  

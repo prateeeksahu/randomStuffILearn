@@ -1,0 +1,30 @@
+ These notes are created while learning git commands from GIT documentation
+----------------------------------------------------------------------------
+
+1. git switch<args>
+	
+	new version of got checkout	
+
+	given $ git switch -c new v2.6.13 command
+
+	'switch' switches to new branch we are about to create
+	-c creates the new branch
+	'new' is the new branch name
+	'v2.6.13' is the tag given to that commit
+
+	so it creates a new branch of given tag and switches to it... or checkouts to it
+
+	intrestingly if you pass --detach with a commit or a tag now your head is at tag and not on branch... now you can make a changes here and make a new commit
+
+
+$ git tag -l
+
+	this command will show us all the tags tagged to any commit
+
+$ git reset --hard v2.6.17
+
+	this command will reset the current directory to specified tag, revert the changes to that commit
+
+$ git show
+
+	this command shows the most recent commit information
